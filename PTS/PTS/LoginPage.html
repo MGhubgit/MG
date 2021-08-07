@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<script >
+	function validate()
+	{
+      var text=document.getElementById("user").value;
+	  var x=/[a-z]/;
+	  if(x.test(text))
+	  {
+		  document.getElementById("id1").innerHTML="valid";
+		  document.getElementById("id1").style.visibility="hidden";
+		  document.getElementById("id1").style.color="green";
+	  }
+	  else{
+		  document.getElementById("id1").innerHTML="Enter valid UserName";
+		  document.getElementById("id1").style.visibility="visible";
+		  document.getElementById("id1").style.color="red";
+	  }
+	  var text1=document.getElementById("pswd").value;
+	  var x=/[a-z A-Z][0-9]/;
+	  if(x.test(text1))
+	  {
+		  document.getElementById("id2").innerHTML="valid";
+		  document.getElementById("id2").style.visibility="hidden";
+		  document.getElementById("id2").style.color="green";
+	  }
+	  else{
+		  document.getElementById("id2").innerHTML="Enter valid Password";
+		  document.getElementById("id2").style.visibility="visible";
+		  document.getElementById("id2").style.color="red";
+	  }
+	}	
+	</script>
+	<style type="text/css">
+		.box{
+			width: 300px;
+			padding: 40px;
+			position: absolute;
+			top: 50%;
+			border: 3px solid skyblue;
+			border-radius: 10px; 
+			left: 50%;
+			transform: translate(-60%,-60%);
+			background: black;
+			text-align: center;
+			background: url("https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-10-full.jpg");
+			background-repeat: no-repeat;
+		}
+		.box h1{
+			color: black;
+			text-shadow: 2px 2px 3px black;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+		.box input[type="text"],.box input[type="password"]{
+			border: 0;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid #3498db;
+			padding: 14px 10px;
+			width: 200px;
+			outline: none;
+			color: black;
+			border-radius: 24px;
+			transform: 0.25s;
+		}
+		
+		.box button[type="submit"]{
+			border: 0;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid green;
+			padding: 14px 40px;
+			
+			outline: none;
+			color: black;
+			border-radius: 24px;
+			transform: 0.25s;
+			cursor: pointer;
+
+		}
+		.body{
+    background-image: url("C:/Users/MONIKA/Desktop/PTS/naturer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+		
+	</style>
+</head>
+<body class="body">
+	<form onclick="validate()" action="file:///C:/Users/MONIKA/Desktop/PTS/REgistration.html" class="box" >
+		<h1>Login</h1>
+		<input id="user" type="text"  placeholder="userName" maxlength="20">
+		<label id="id1" style="color: red;visibility: hidden;">Invalid UserName</label>
+		<input id="pswd" type="password"  placeholder="password" maxlength="10">
+		<label id="id2" style="color: red;visibility: hidden;">Invalid Password</label>
+		<button id="submit"  type="submit"">Login</button>
+
+		
+	</form>
+
+</body>
+</html>
